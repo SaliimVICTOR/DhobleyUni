@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    
+   
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+body{
+    background: linear-gradient(to bottom, #145cf0ab,white,#00f017ab);
+    background-repeat: no-repeat;
+    
+}
+.welcome{
+    animation: colors 5s linear infinite;
+    
+}
+.app{
+width: 370px;
+height: 804px;
+
+}
+.userInfo{
+    width: 250px;
+    height: 300px;
+    border: 3px solid blue;
+    position: absolute;
+    left: 55px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    #display: none;
+    backdrop-filter: blur(10px);
+}
+input{
+    width: 182px;
+    height: 35px;
+    border: 0px;
+    padding: 5px;
+    border-radius: 7px;
+}
+h4{
+    margin: -1px;
+}
+#saveInfo{
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    background: #145cf0ab;
+    font-weight: 1000;
+    
+}
+#saveInfo:active{
+    background: white;
+    color: black;
+    transition: .2s;
+}
+input:hover{
+    width:199px;
+    transition: .4s;
+    background: linear-gradient(to bottom, #00f017ab);
+    outline: 0;
+}
+#haveAcc{
+    font-weight: 1000;
+}
+#haveAcc span{
+    color: #263ce5dc
+}
+
+
+
+@keyframes colors{
+100%,0%{color: white}
+50%{color: black}
+}
+#modes{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    
+}
+.floor{
+    width: 341px;
+    height: 50px;
+    border: 3px solid;
+    position: fixed;
+    bottom: 1px;
+    border-radius: 12px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+.floor button{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    background: white;
+    border: 0px;
+    color: #4077ff;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+.floor button:hover{
+   color: white;
+   background: blue;
+   transform: scale(1.3);
+   transition: .5s;
+}
+.floor button:nth-child(1){
+    margin-left: -9px;
+    
+}
+
+.fuculties{
+    width: 350px;
+    height: 600px;
+    bborder: 3px solid#4063ffc3;
+    border-radius: 10px;
+    padding: 8px;
+    margin-left: -5px;
+    margin-top: -15px;
+    
+}
+.fuculties p{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    height: 200px;
+    margin: 5px auto;
+    align-items: center;
+    border-radius: 10px;
+    
+   
+}
+.fuculties p:hover{
+    transition: .5s;
+    transform:scale(1.05)
+}
+#IT{
+    
+background-image:url("https://i.imgur.com/YCnpjgR.jpeg");
+    background-size: cover;
+    background-position: 0px center;
+    
+     
+}
+.fuculties p button{
+    width: 100px;
+    height: 60px;
+    border-color: #00ff42fb;
+    border-radius: 4px;
+    color: #00ff42fb;
+    background: transparent;
+    border: 0px;
+    backdrop-filter: blur(10px);
+    font-weight:1000;
+    
+}
+#law{
+  background-image:url("https://i.imgur.com/BYrpCjT.jpeg");
+    background-size: cover;  
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    height: 200px;
+    margin: 5px auto;
+    align-items: center;
+    border-radius: 10px;
+    transform:translateY(28px);
+}
+
+
+#health{
+    background-image: url("https://i.imgur.com/l7gejku.jpeg");
+    background-size: cover;
+}
+#mgmt{
+    background-image:url("https://i.imgur.com/HSxdRvn.jpeg");
+    background-size: cover;
+}
+#eco{
+    background-image:url("https://i.imgur.com/NCpjKyh.jpeg");
+    background-size: cover;
+    background-position: 10px center;
+}
+#mid{
+    background-image:url("https://i.imgur.com/pXz0FeL.jpeg");
+    background-size: cover;
+}
+#status{
+    width: 250px;
+    height: 20px;
+    background: #00ff18c5;
+    padding: 3px;
+    border-radius: 12px;
+    position: absolute;
+    left: 10px;
+    bottom: 1px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 1000;
+}
+.done{
+width: 250px;
+height: 250px;
+border: 3px solid;
+border-radius: 15px;
+position: absolute;
+backdrop-filter: blur(10px);
+font-weight: 1000;
+color: green;
+background: #00e54eb2;
+
+}
+
+.done p:nth-child(1){
+ width: 100px;
+ height: 100px;
+ border: 3px solid black;
+ position: relative;
+ left: 30%;
+ border-radius:50%;
+ bottom: 15px;
+background-image:url("https://i.imgur.com/gL9Skcr.jpeg");
+    background-size: cover;
+    
+}
+.done p:nth-child(2),p:nth-child(3){
+    width: 250px;
+    height: 30px; 
+    border-radius: 10px;
+    position: relative;
+    float: left;
+    top: -30px;
+    margin-bottom: -10px;
+    background: #006cffb8;
+    color: white;
+    padding: 4px auto;
+}
+#saved{
+    width: 120px;
+    height: 50px;
+    color: white;
+    background: #1538ffb8;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+}
+.loading{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loading p{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 10px solid;
+    border-top-color: transparent;
+    animation: load .5s linear infinite;
+    
+}
+@keyframes load{
+ from{transform: rotate(0deg)}
+ to{transform: rotate(360deg)}
+}
+.myUniversity{
+    width: 370px;
+    height: 1200px;
+    rborder:3px solid;
+    border-radius: 16px;
+    position: absolute;
+    left: -1px;
+    padding: 7px;
+    background: linear-gradient(to bottom, #0081ffbb,#11ff00bb);
+    
+}
+.myUniversity img:nth-child(1){
+    width: 320px;
+    height: 100px;
+}
+.myUniversity img:nth-child(2){
+    width: 355px;
+    height: 200px;
+    border-radius: 20px;
+}
+.myUniversity p{
+    width: 320px;
+    height: 400px;
+    color: blue;
+    font-weight: 1000;
+    background: #0c192ed9;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: h'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  vborder: 2px solid;
+  position: relative; 
+  left: 10px;
+  color: white;
+}
+.myUniversity p:hover{
+    transform: scale(1.09);
+    transition: 1.2s;
+}
+.applic{
+    width: 200px;
+    height: 280px;
+    border: 3px solid;
+    padding: 10px;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    
+}
+.applic input{
+    margin: 5px;
+    text-align: center
+}
+.applic button{
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    background:#2b43ffa8;
+    color: white;
+    font-weight: 1000;
+    border-radius: 20px;
+}
+.file{
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    left: 85px;
+    bottom: 150px;
+}
+
+.callMe{
+    position: absolute;
+    width: 360px;
+    height:400px;
+    border: 3px solid;
+    border-radius: 10px;
+    bottom: 160px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 1000;
+}
+.callMe h4 i{
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+    font-size: 40px;
+}
+.callMe h4 i:nth-child(1){
+    
+}
+.callMe h1{
+    width: 325px;
+    height: 40px;
+    background: #2b6dffbb;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+}
+.callMe h4{
+    width: 330px;
+    height: 45px;
+    background: #556dffea;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+.file0{
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    left: 85px;
+    bottom: 0px;
+    top: 820px;
+    border-radius: 3px solid;
+}
+.applic0 input{
+    margin: 5px;
+    text-align: center
+}
+.applic0 button{
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    background:#2b43ffa8;
+    color: white;
+    font-weight: 1000;
+    border-radius: 20px;
+    
+}
+
+.prime{
+    width: 350px;
+    height: 685px;
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    position: relative;
+    bottom: 30px;
+}
+
+.prime  h1{
+  width:310px;
+  height: 50px;
+  background:#eaffff ;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+.prime  h1::before{
+    display: block;
+    content: "";
+    width: 150px;
+    height: 40px;
+    background:#eaffff;
+    position: absolute;
+    left: 320px;
+    animation: hide 6s linear infinite;
+    
+}
+.prime div{
+    width: 169.3px;
+    height: 200px;
+    border: 3px solid;
+    float: left;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+    color: white;
+    
+}
+.prime div h5{
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    background: #0057ffae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#computer{
+    background-image:url("https://i.imgur.com/b7Jb1iw.jpeg");
+    background-size: cover;
+}
+.prime div:hover{
+    transform: scale(1.2);
+    background:#0057ffad;
+    transition: .5s;
+    
+}
+#phyLap{
+    background-image:url("https://i.imgur.com/BiK5z35.jpeg");
+    background-size: cover;
+}
+#anatomy{
+    background-image:url("https://i.imgur.com/HmNeTvh.jpeg");
+    background-size: cover;
+}
+#midLap{
+    background-image:url("https://i.imgur.com/H3neKDf.jpeg");
+    background-size: cover;
+}
+@keyframes hide{
+    0%,100%{transform: translateX(0px); border-left: 3px solid;}
+    50%{transform: translateX(-150px)}
+}
+#mow{
+  background-image:url("https://i.imgur.com/UKedb6w.jpeg");
+    background-size: cover;
+}
+.main{
+    width: 200px;
+    height: 200px;
+    border: 16px;
+    background: #cdcdcdce;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    border-radius: 16px;
+    color: #0096ffc3
+}
+.main img{
+    width: 190px;
+    
+}
+.main #mowlid{
+    transform:scale(.3);
+    border-radius:15px;
+    position: absolute;
+    right: 10px;
+    top: 105px;
+}
+#plsWait{
+    width: 100px;
+    height: 100px;
+    border: 15px solid;
+    position: absolute;
+    left:14%;
+    top: 280px;
+    border-radius: 100%;
+    border-left-color: transparent;
+    animation: load .5s linear infinite;
+    
+}
+ .noNet{
+     width: 200px;
+    height: 200px;
+    border: 16px;
+    background: #cdcdcdce;
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    border-radius: 16px;
+    color: #0096ffc3;
+    padding: 25px;
+ }
+ #reTry{
+     width: 150px;
+     height: 50px;
+     color: white;
+     background: #158cffcf;
+     font-weight: 1000;
+     font-size: 30px;
+     border-radius: 10px;
+ }
+</style>
+
+</head>
+<body>
+<div class="main">
+<h2>Kismayo University Dhobley Branch</h2>
+<img src="https://i.imgur.com/3FyOz26.png">
+<img src="https://i.imgur.com/sa6HsHD.jpeg" id="mowlid">
+<p id="plsWait"></p>
+</div>
+
+
+    <div class="allItems">
+ <div class="app">
+ <div class="welcome">
+<h1>Welcome to Kismayo University Dhobley Branch </h1>
+ </div>  
+<div class="userInfo">
+    <div class="realInfo">
+<h3 id="sign">Sign Up</h3>
+<h4><i class="fa-solid fa-square-envelope"></i> Email address</h4>
+<input type="email"id="email" placeholder="email address">
+<h4><i class="fa-solid fa-lock"></i> Password</h4>
+<input type="password"id="password" placeholder="password">
+<button id="saveInfo">Sign Up</button>
+<p id="haveAcc">Already have an account?<span id="mySpan">Log in</span></p>
+<p id="status">Enter a valid Email & Password</p>
+</div>
+<div class="done">
+<p id="userPic"></p>
+<p id="emailVal"></p>
+<p id="passVal"></p>
+<button id="saved">Save Data</button>
+</div>
+<div class="loading">
+    <p id="load"></p>
+</div>
+
+</div>
+ <div class="myUniversity">
+<img src="https://i.imgur.com/3FyOz26.png">
+<img src="https://i.imgur.com/JHdk8hZ.jpeg">
+<h1 style="color:#0074e5b2">Chancellor’s Message</h1>
+<p id="faah">
+We are truly proud that today, the nursery schools that were started as an orphan centers, are recognized as a University. It is a privilege we are determined to build on, to ensure that our primary goal, of meeting the educational needs of students in the region is fulfilled to the best of our abilities. Since its foundation in 2005, Kismayo University has worked to develop academic freedom under a spirit of self-reliance and self-respect, and to open up new perspectives in creative scholarly endeavor.<br>
+
+Dr. Mohamed Abdi Adam<br>
+
+Chancellor of Kismayo University</p>
+
+<div class="file0">
+<div class="applic0">
+<input id="n10"type="text" placeholder="First Name">
+<input id="n20" type="text" placeholder="Midle Name">
+<input id="n30" type="text" placeholder="Last Name">
+<input id="sub0" type="text" placeholder="Subject">
+   <button id="doneApply0">Apply</button>
+</div>
+</div>
+</div>
+
+<div class="prime">
+<h1>University <span style="color: #0057ffe5">Highlights</s></h1>  
+<div id="computer"><h5>Computer Lap</h5></div>
+<div id="phyLap"><h5>Physics Lap</h5></div>
+<div id="anatomy"><h5>Anatomy and Physiology Lap</h5></div>
+<div id="midLap"><h5>Midwifery Lap</h5></div>
+
+</div>
+
+ <div class="fuculties">
+ <p id="IT"><button id="applyIT">Apply Faculty of Computer studies</button></p>
+<p id="mid"><button id="applyMid">Apply Faculty of Midwifery</button></p>
+<p id="law"><button id="applyLaw">apply Faculty of Sharia & Law</button></p>
+<p id="eco"><button id="applyEco">Apply Faculty of Economics</button></p>
+
+<p id="mgmt"><button id="applyMgmt">Apply Faculty of Management science</button></p>
+
+<p id="health"><button id="applyHealth">Apply Health science</button></p>
+ </div>
+ 
+     
+ </div>
+
+
+<div class="callMe">
+ <h1>Looking to get in touch</h1>
+ <h4><i class="fa-solid fa-phone"></i><a href="tel:+252613620308">You can call us</a></h4>
+ <h4><i class="fa-solid fa-envelope"></i><a href="mailto:info@ku.edu.so">Email addrs</a></h4>
+ <h4><i class="fa-brands fa-square-whatsapp" style="color: #00ff00;"></i><a href="https://wa.me/+252 61 3620308">Whatsapp</a></h4>
+ <h4><i class="fa-brands fa-square-facebook"></i><a href="https://www.facebook.com/share/1AZBeg3ByL/">Facebook</a></h4>
+ 
+</div>
+
+>
+<div class="file">
+<div class="applic">
+<input id="n1"type="text" placeholder="First Name">
+<input id="n2" type="text" placeholder="Midle Name">
+<input id="n3" type="text" placeholder="Last Name">
+<input id="sub" type="text" placeholder="Subject">
+   <button id="doneApply">Apply</button>
+</div>
+</div>
+ </div>
+ 
+
+<div class="floor">
+<button id="register"><i class="fa-solid fa-user-plus"></i></button> 
+
+<button id="Faculty"><i class="fa-solid fa-desktop"></i></button>
+
+<button id="about"><i class="fa-solid fa-building-columns"></i></button>
+
+<button id="call"><i class="fa-solid fa-phone-volume"></i></button>
+
+<button id="dev"><i class="fa-solid fa-crown"></i></button>
+</div>
+</div>
+<div class="noNet">
+<h1>Fadlan Khadka fur</h1>    
+<button id="reTry">Tijaabi</button>
+</div>
+</body>
+<script  type="module">
+ 
+
+const noNet=document.querySelector(".noNet");
+noNet.style="display:none;"
+ reTry.onclick=function(){
+     window.location.reload()
+ }
+    
+ 
+    
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDrRbFB6HxqsJWaITUOOy5wIRgRGid5wNc",
+    authDomain: "kismayo-university-3d2be.firebaseapp.com",
+    projectId: "kismayo-university-3d2be",
+    storageBucket: "kismayo-university-3d2be.firebasestorage.app",
+    messagingSenderId: "603774454674",
+    appId: "1:603774454674:web:8d64e3d818d88558b9cf4b"
+  };
+const callMe=document.querySelector(".callMe");
+callMe.style="display:none"
+  // Initialize Firebase
+  const myUniversity = document.querySelector(".myUniversity")
+myUniversity.style="display: none"
+ const load = document.getElementById("load");
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+const loading = document.querySelector(".loading");
+loading.style="display: none"  
+  const status = document.getElementById("status");
+ const realInfo =  document.querySelector(".realInfo")  ;
+const done = document.querySelector(".done")
+done.style="display: none"
+ const saveInfo = document.getElementById("saveInfo");
+ saveInfo.onclick=function(){
+ const email = document.getElementById("email").value;
+ const password = document.getElementById("password").value;
+ 
+ createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    status.innerHTML="User created"
+    const userPic = document.getElementById("userPic");
+const emailVal = document.getElementById("emailVal");
+const passVal = document.getElementById("passVal");
+passVal.innerHTML="Password : "+password
+emailVal.innerHTML="Email : "+email
+realInfo.style="display: none"
+done.style="display: block"
+done.style="top: 350px;transition: 1s;";
+done.style="transition: 1s;"
+
+const saved = document.getElementById("saved");
+saved.onclick=function(){
+    done.style="display: none"
+    loading.style="display: block; display: flex; justify-content: center; align-items: center;";
+    setTimeout(()=>{
+    load.style="display: none";
+    userInfo.style="background-image:url(https://i.imgur.com/E4dpVu0.jpeg);background-size: cover;background-position:-21px center"
+    },3000)
+}
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    status.innerHTML=errorMessage
+    if(errorMessage=="Firebase: Error (auth/email-already-in-use)."){
+        status.innerHTML="This Email is already in use! "
+    }
+    
+    if(errorMessage=="Firebase: Error (auth/invalid-email)."){
+        status.style="color: red;"
+        status.innerHTML="Invalid Email!"
+    }
+    // ..
+  });
+     
+     
+     
+ }
+const mainLoad = document.querySelector(".main");
+const items = document.querySelector(".allItems");
+const floor = document.querySelector(".floor");
+floor.style="display: none"
+items.style="display: none"
+const prime = document.querySelector(".prime")
+prime.style="display: none;"
+    
+    setTimeout(()=>{
+if (!navigator.onLine) {
+      items.style="display:none";
+      mainLoad.style="display:none";
+      noNet.style="display:block"
+    }
+    else{
+        mainLoad.style="display:none"
+        items.style="display:block"
+        floor.style="display:block"
+    }
+    },4000)
+    
+    
+    
+const userInfo = document.querySelector(".userInfo")
+const sign = document.getElementById("sign")
+const span = document.getElementById("mySpan")
+span.onclick=function() {
+  sign.innerHTML = sign.innerHTML === "Sign Up" ? "Login" : "Sign Up";
+  saveInfo.innerHTML = saveInfo.innerHTML==="Sign Up"?"Login" : "Sign Up";
+}
+
+
+const register = document.getElementById("register")
+const Faculty = document.getElementById("Faculty")
+const about = document.getElementById("about")
+const call = document.getElementById("call")
+const dev = document.getElementById("dev")
+const fuculties = document.querySelector(".fuculties")
+fuculties.style="display: none"
+Faculty.onclick=function(){
+ userInfo.style="display:none"
+ fuculties.style="display: block"
+ myUniversity.style="display: none"
+ file.style="display: none"
+ callMe.style="display:none"
+ prime.style="display:none"
+}
+
+register.onclick=function(){
+    userInfo.style="display:block"
+    myUniversity.style="display: none"
+    fuculties.style="display:none"
+    file.style="display: none"
+    file.style="display: none"
+    callMe.style="display:none"
+    prime.style="display:none"
+}
+
+about.onclick=function(){
+    userInfo.style="display:none"
+    fuculties.style="display:none"
+    myUniversity.style="display: block"
+    file.style="display: none"
+    callMe.style="display:none"
+    prime.style="display:none"
+}
+
+call.onclick=function(){
+    callMe.style="display:block"
+    file.style="display: none"
+    userInfo.style="display:none"
+    fuculties.style="display:none"
+    myUniversity.style="display: none"
+    prime.style="display:none"
+}
+
+document.getElementById("doneApply").addEventListener("click", function() {
+  const firstName = document.getElementById("n1").value;
+  const middleName = document.getElementById("n2").value;
+  const lastName = document.getElementById("n3").value;
+  const subject = document.getElementById("sub").value;
+
+  const message = `Application%0AFirst name: ${firstName}%0AMiddle name: ${middleName}%0ALast Name : ${lastName}%0ASubject : ${subject}`;
+  const phoneNumber = "252613620308"; // '+'
+
+  const whatsappUrl = `https://wa.me/+${phoneNumber}?text=${message}`;
+
+  window.open(whatsappUrl, "_blank");
+});
+
+const file=document.querySelector(".file");
+file.style="display: none";
+const IT = document.getElementById("IT")
+const mid= document.getElementById("mid")
+const eco= document.getElementById("eco")
+const mgmt= document.getElementById("mgmt")
+const health= document.getElementById("health")
+const law = document.getElementById("law")
+
+const ready = [IT,mid,eco,mgmt,health,law];
+ready.forEach((one)=>one.onclick=function(){file.style="display:block;"})
+
+
+
+
+document.getElementById("doneApply0").addEventListener("click", function() {
+  // Get input values
+  const firstName = document.getElementById("n10").value.trim();
+  const middleName = document.getElementById("n20").value.trim();
+  const lastName = document.getElementById("n30").value.trim();
+  const subject = document.getElementById("sub0").value.trim();
+
+  // Format the message
+  const message = 
+    `First Name: ${firstName}%0A` +
+    `Middle Name: ${middleName}%0A` +
+    `Last Name: ${lastName}%0A` +
+    `Subject: ${subject}`;
+
+  // WhatsApp number (international format, no + or spaces)
+  const phoneNumber = "252613620308";
+
+  // Open WhatsApp with pre-filled message
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+});
+dev.onclick=function(){
+    prime.style="display:block"
+    callMe.style="display:none"
+    file.style="display: none
