@@ -1,4 +1,3 @@
-codemagic.yaml
 workflows:
   build_webview_app:
     name: Build Webview App
